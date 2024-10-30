@@ -64,7 +64,7 @@ private func request<T: Decodable>(_ target: Target, isLoading: Bool = true, isM
 ``` 
 
 ### Loading Progress Bar 처리 공통화
-- setLoadingProgress(...) 함수 호출을 통해 Rxswift 로 처리되었다.
+- setLoadingProgress(...) 함수 호출하여 내부 Rxswift BehaviorSubject 로 이벤트를 보낸다.
 - log 에 target.typeString 을 넘겨 Loading UI 가 나타날 때 어떤 api 가 호출되었는지 log 를 남긴다.
 - Loading UI 가 문제가 있는 경우 log 를 통해 어떤 api 에서 문제가 발생했는지 디버깅하기 편했다.
 
