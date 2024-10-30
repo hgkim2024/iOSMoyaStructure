@@ -182,7 +182,8 @@ extension DependencyValues {
 
 @Dependency(\.xxxProvider) private var xxxProvider
 
-func callMainApi(success: () -> Void) {
+@MainActor
+func callMainApi(success: () -> Void) async {
     guard let resModel: xxxModel = await xxxProvider.request(.) else {
         // fail
         return
